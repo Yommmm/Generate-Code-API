@@ -2,6 +2,7 @@ package com.boot.service.factory;
 
 import org.springframework.stereotype.Component;
 
+import com.boot.service.factory.front.FrontBtnModel;
 import com.boot.service.factory.front.FrontDetailContentModel;
 import com.boot.service.factory.front.FrontDetailModel;
 import com.boot.service.factory.front.FrontIndexModel;
@@ -55,6 +56,10 @@ public class CodeFactoryProducer {
 		
 		if(factoryType.equalsIgnoreCase("frontDetailContent")) {
 			return new FrontDetailContentModel();
+		}
+		
+		if(factoryType.equalsIgnoreCase("frontBtn")) {
+			return new FrontBtnModel();
 		}
 		
 		return null;

@@ -39,7 +39,7 @@ export default {
     return {
       spinShow: true,
       errorShow: false,
-      detailData: [], //详情数据
+      detailData: {}, //详情数据
     };
   },
   filters: {

@@ -25,7 +25,7 @@
         <Table stripe :columns="columns" :data="tableData" :height="tableHeight"></Table>
       </div>
       <div slot="layout-content-footer" class="zlst-page">
-		<span class="totalNum">共 {{total}} 条</span>
+		<span class="totalNum">共 {{totalNum}} 条</span>
 		<z-page
           :total="totalNum"
           :current="queryPage"
@@ -45,13 +45,13 @@ import utils from "../../tools/utils.js";
 import getData from "../../api/server/getData";
 import ${packName}Btn from "./children/${packName}Btn.vue";
 import ${packName}Detail from "./children/${packName}Detail.vue";
-import ${packName}AddEdit from "./children/${packName}AddEdit.vue";
+// import ${packName}AddEdit from "./children/${packName}AddEdit.vue";
 export default {
   name: "${packName}Index",
   components: {
     ${packName}Btn,
     ${packName}Detail,
-    ${packName}AddEdit
+    // ${packName}AddEdit
   },
   data: function() {
     return {
