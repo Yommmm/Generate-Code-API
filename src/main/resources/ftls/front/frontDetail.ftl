@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     goBack: function() {
-      this.$emit("closeMain");
+      this.$emit("close");
     },
     //查询详情
     queryDetail() {
@@ -63,7 +63,7 @@ export default {
       getData.getRestful(path, {${packName}Id: that.id}).then(function(res) {
         if (res.status === 200 && res.data.resultCode === 0) {
           that.spinShow=false;
-          that.detailsData  = res.data.data;
+          that.detailData  = res.data.data;
         } else {
           that.spinShow = false;
           that.errorShow = true;
@@ -75,10 +75,6 @@ export default {
         }
       });
     },
-    //关闭组件页面
-    closeDetail:function(){
-      this.$emit("closeDetail")
-    }
   }
 };
 </script>
